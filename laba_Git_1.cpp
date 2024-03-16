@@ -1,0 +1,24 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+void triangle(int a,int b,int c){
+    int perimeter=a+b+c;
+    int areaToHeronsFormula=sqrt(perimeter*(perimeter-a)*(perimeter-b)*(perimeter-c));
+    bool examinationForIsosceles=false;
+    if ((a==c and a!=b) or (a==b and a!=c) or (b==c and b!=c) or (a==b and b==c)){
+        examinationForIsosceles=true;
+    }
+    if (examinationForIsosceles==1){
+        cout<<"равнобедренный треугольник, ";
+    }
+    else{
+        cout<<"не равнобедренный треугольник, ";
+    }
+    cout<<"периметр:"<<perimeter<<","<<" площадь по формуле Герона:"<<areaToHeronsFormula<<".";
+}
+int main(){
+    int side_1=3;
+    int side_2=2;
+    int side_3=3;
+    triangle(side_1,side_2,side_3);
+}
