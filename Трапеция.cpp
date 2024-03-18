@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int P, S, Srline;
+float P, S, Srline;
 
 int Trapesia(float a, float b, float c, float d, float h) {
 	if ((a + b > c + d) && (c + d >= h) && (a + b > h)) {
