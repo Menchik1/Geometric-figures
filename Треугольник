@@ -1,11 +1,17 @@
+#include <iostream>
 #include <math.h>
 using namespace std;
 int triangle(int a,int b,int c,int* perimeter,int* areaToHeronsFormula,bool* examinationForIsosceles){
-    *perimeter=a+b+c;
-    *areaToHeronsFormula=sqrt(*perimeter/2*(*perimeter/2-a)*(*perimeter/2-b)*(*perimeter/2-c));
-    *examinationForIsosceles=false;
-    if ((a==c and a!=b) or (a==b and a!=c) or (b==c and b!=c) or (a==b and b==c)){
-        *examinationForIsosceles=true;
+    if(a+b>c or a+c>b or b+c>a){
+        *perimeter=a+b+c;
+        *areaToHeronsFormula=sqrt(*perimeter/2*(*perimeter/2-a)*(*perimeter/2-b)*(*perimeter/2-c));
+        *examinationForIsosceles=false;
+        if ((a==c and a!=b) or (a==b and a!=c) or (b==c and b!=c) or (a==b and b==c)){
+            *examinationForIsosceles=true;
+        }
+    }else{
+    cout<<"треугольник не существует";
+    return 0;
     }
 }
 int main(){
