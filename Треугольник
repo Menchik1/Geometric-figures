@@ -2,7 +2,7 @@
 using namespace std;
 int triangle(int a,int b,int c,int* perimeter,int* areaToHeronsFormula,bool* examinationForIsosceles){
     *perimeter=a+b+c;
-    *areaToHeronsFormula=sqrt(*perimeter*(*perimeter-a)*(*perimeter-b)*(*perimeter-c));
+    *areaToHeronsFormula=sqrt(*perimeter/2*(*perimeter/2-a)*(*perimeter/2-b)*(*perimeter/2-c));
     *examinationForIsosceles=false;
     if ((a==c and a!=b) or (a==b and a!=c) or (b==c and b!=c) or (a==b and b==c)){
         *examinationForIsosceles=true;
