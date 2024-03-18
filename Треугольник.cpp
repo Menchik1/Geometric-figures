@@ -22,6 +22,6 @@ int main() {
     float side_1 = 4;
     float side_2 = 2;
     float side_3 = 3;
-    triangle(side_1, side_2, side_3);
+    triangle(side_1, side_2, side_3);//коммент
 }
 
